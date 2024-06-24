@@ -1,0 +1,101 @@
+.twoColumnSection {
+  width: 100%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.leftColumn,
+.rightColumn {
+  width: 100%;
+  padding: 10px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.heading {
+  width: 100%;
+  font-family: "Univers LT Std", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+}
+
+.paragraph {
+  width: 100%;
+  font-family: "Univers 65", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22.4px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.paragraph:last-child {
+  font-family: "Univers 55", sans-serif;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.button {
+  max-width: 243px;
+  height: 64px;
+  background: var(--red, rgba(139, 35, 81, 1));
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .twoColumnSection {
+    max-width: 1042px;
+    flex-direction: row;
+  }
+
+  .leftColumn,
+  .rightColumn {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .paragraph {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .button {
+    width: auto;
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .paragraph {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}

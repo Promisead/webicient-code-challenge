@@ -1,0 +1,75 @@
+.gridContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row; /* Default: row */
+  width: 100%;
+  height: 733px; /* Adjust height as per your design */
+  background-image: url("/grigbg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  height: 733px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between; /* Distributes items evenly across the main axis */
+}
+
+.gridItem {
+  flex: 1;
+  height: 733px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gridItem:hover {
+  transform: scale(1.05); /* Example hover effect */
+}
+
+.plusIcon {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  left: 40px;
+  gap: 0px;
+  opacity: 0px;
+
+  transition: opacity 0.3s ease-in-out;
+}
+
+.filledPlusIcon {
+  position: absolute;
+  /*   top: 40%; */ /* Adjust positioning as per your design */
+  left: 40px; /* Adjust positioning as per your design */
+  transform: translate(-50%, -50%); /* Center the icon */
+  width: 64px; /* Adjust size as per your design */
+  height: 64px; /* Adjust size as per your design */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out; /* Example animation */
+}
+
+.gridItem:hover .plusIcon {
+  opacity: 0; /* Hide plus icon on hover */
+}
+
+.gridItem:hover .filledPlusIcon {
+  opacity: 1; /* Show filled plus icon on hover */
+}
+
+@media (max-width: 480px) {
+  .gridContainer .overlay {
+    flex-direction: column;
+    height: 733px;
+  }
+}

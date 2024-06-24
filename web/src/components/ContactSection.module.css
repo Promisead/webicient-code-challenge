@@ -1,0 +1,61 @@
+.contactSection {
+  position: relative;
+  width: 100%;
+  height: 758px;
+  margin: 50px auto;
+  background-image: url("/contact-bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "DIN Next W1G", Arial, Helvetica, sans-serif;
+  padding: 50px 20px;
+
+  @media (max-width: 768px) {
+    height: auto;
+    background-image: none;
+  }
+}
+
+.contactForm {
+  width: 100%; /* Full width on smaller screens */
+  max-width: 435px; /* Limit width on larger screens */
+  background-color: #172938;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  background-color: #000000; /* Background color for inputs */
+  color: #ffffff; /* Text color for inputs */
+}
+
+.textarea {
+  height: 100px; /* Adjust as per your design */
+}
+
+.submitButton {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #ffffff; /* Background color for the submit button */
+  color: #000000; /* Text color for the submit button */
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .contactForm {
+    position: absolute;
+    top: 50%;
+    right: 50px; /* Adjust right distance as per your design */
+    transform: translateY(-50%);
+    width: 435px; /* Width specified in Figma */
+    height: 540px; /* Height specified in Figma */
+  }
+}
